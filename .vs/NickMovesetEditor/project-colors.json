@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "160c38e4-edfe-4899-9809-30443b656508": {
+      "ProjectGuid": "160c38e4-edfe-4899-9809-30443b656508",
+      "DisplayName": "NickMovesetEditor",
+      "ColorIndex": 0
+    },
+    "7b26b1f2-40b1-4fd1-9bf0-fcf583d62742": {
+      "ProjectGuid": "7b26b1f2-40b1-4fd1-9bf0-fcf583d62742",
+      "DisplayName": "NmeLib",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

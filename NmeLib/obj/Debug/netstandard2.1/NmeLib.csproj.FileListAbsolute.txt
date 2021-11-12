@@ -1,0 +1,10 @@
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\bin\Debug\netstandard2.1\NmeLib.deps.json
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\bin\Debug\netstandard2.1\NmeLib.dll
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\bin\Debug\netstandard2.1\NmeLib.pdb
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\obj\Debug\netstandard2.1\NmeLib.csproj.AssemblyReference.cache
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\obj\Debug\netstandard2.1\NmeLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\obj\Debug\netstandard2.1\NmeLib.AssemblyInfoInputs.cache
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\obj\Debug\netstandard2.1\NmeLib.AssemblyInfo.cs
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\obj\Debug\netstandard2.1\NmeLib.csproj.CoreCompileInputs.cache
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\obj\Debug\netstandard2.1\NmeLib.dll
+C:\Users\Coal\Desktop\Coding\C#\NickMovesetEditor\NmeLib\obj\Debug\netstandard2.1\NmeLib.pdb

@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "NmeLib": {
+      "commandName": "Project"
+    },
+    "NickMovesetEditor": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\Coal\\Desktop\\Coding\\C#\\NickMovesetEditor\\NickMovesetEditor\\bin\\Debug\\NickMovesetEditor.exe"
+    },
+    "Profile 1": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Coal\\Desktop\\Coding\\C#\\NickMovesetEditor\\NickMovesetEditor"
+    }
+  }
+}
