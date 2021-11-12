@@ -26,7 +26,6 @@ namespace NmeCompanionPlugin
             _textAssetPath = System.IO.Path.Combine(_bepInExPath, "Movesets");
             if (!System.IO.Directory.Exists(_textAssetPath)) System.IO.Directory.CreateDirectory(_textAssetPath);
         }
-        
         private static void WriteAsset(TextAsset textAsset)
         {
             var textAssetPath = System.IO.Path.Combine(_textAssetPath, textAsset.name + ".bsa");
