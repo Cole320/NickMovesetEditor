@@ -41,6 +41,11 @@ namespace NickMovesetEditor.Windows
             {
                 return statesJson[actionPath[0]][int.Parse(actionPath[1])][actionPath[2]][actionPath[3]][int.Parse(actionPath[4])][actionPath[5]][actionPath[6]][int.Parse(actionPath[7])][actionPath[8]][int.Parse(actionPath[9])][valueKey].ToString();
             }
+            
+            if (actionPath.Count == 11)
+            {
+                return statesJson[actionPath[0]][int.Parse(actionPath[1])][actionPath[2]][actionPath[3]][int.Parse(actionPath[4])][actionPath[5]][actionPath[6]][int.Parse(actionPath[7])][actionPath[8]][int.Parse(actionPath[9])][actionPath[10]][valueKey].ToString();
+            }
             return "L";
         }
 
@@ -73,6 +78,12 @@ namespace NickMovesetEditor.Windows
             if (actionPath.Count == 10)
             {
                 statesJson[actionPath[0]][int.Parse(actionPath[1])][actionPath[2]][actionPath[3]][int.Parse(actionPath[4])][actionPath[5]][actionPath[6]][int.Parse(actionPath[7])][actionPath[8]][int.Parse(actionPath[9])][valueKey] = newValue;
+            }
+            
+            // Hack used for SetFloatId rn
+            if (actionPath.Count == 11)
+            {
+                statesJson[actionPath[0]][int.Parse(actionPath[1])][actionPath[2]][actionPath[3]][int.Parse(actionPath[4])][actionPath[5]][actionPath[6]][int.Parse(actionPath[7])][actionPath[8]][int.Parse(actionPath[9])][actionPath[10]][valueKey] = newValue;
             }
         }
 

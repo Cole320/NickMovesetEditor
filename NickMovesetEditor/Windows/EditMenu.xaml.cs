@@ -51,8 +51,19 @@ namespace NickMovesetEditor.Windows
                 
                 if (textBox.Name == "Radius")
                 {
-                    MessageBox.ShowMessage(textBox.Text);
                     Helper.SetActionValue(ref _statesJson, _actionPath, "Radius", textBox.Text);
+                }
+
+                if (textBox.Name.Contains("SetFloatId"))
+                {
+                    // TODO: make this better
+                    // THIS IS SO BAD-
+                    List<string> tempActionPath = new List<string>(_actionPath); 
+                    tempActionPath.Add("Sets");
+                    tempActionPath.Add(textBox.Name[textBox.Name.Length - 1].ToString());
+                    tempActionPath.Add("Source");
+                    Debug.WriteLine(tempActionPath.ToString());
+                    Helper.SetActionValue(ref _statesJson, tempActionPath, "Value", textBox.Text);
                 }
             }
             Close();

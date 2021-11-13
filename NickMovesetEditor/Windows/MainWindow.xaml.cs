@@ -16,6 +16,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using Newtonsoft.Json.Bson;
@@ -145,6 +146,7 @@ namespace NickMovesetEditor.Windows
                 }
             }
             SubActionList.UnselectAll();
+            SubSubActionList.Items.Clear();
         }
 
         private void SelectSubAction(object sender, RoutedEventArgs e)
@@ -175,6 +177,8 @@ namespace NickMovesetEditor.Windows
             SelectedState.Content = CharacterState;
             GetStateNumber();
             ActionList.Items.Clear();
+            SubActionList.Items.Clear();
+            SubSubActionList.Items.Clear();
             
             foreach (var stateTag in _statesJson["States"][StateNumber]["Tags"])
             {
@@ -281,6 +285,33 @@ namespace NickMovesetEditor.Windows
                 
                 editMenu.MainLayoutGrid.Children.Add(radiusTextBlock);
                 editMenu.MainLayoutGrid.Children.Add(radiusTextBox);
+            }
+            
+            if (Helper.GetActionTid(_statesJson, actionPath) == "SetFloatId")
+            {
+                // Look through list of sets
+                var i = 0;
+                foreach (var set in JToken.Parse(Helper.GetActionValue(_statesJson, actionPath, "Sets")))
+                {
+                    Debug.WriteLine(set["Way"]);
+                    
+                    TextBlock targetTextBlock = new TextBlock
+                    {
+                        Text = set["Target"]["Id"] + ":",
+                        Style = editMenu.MainLayoutGrid.FindResource("LeftTextBlock") as Style
+                    };
+                    
+                    TextBox sourceTextBox = new TextBox
+                    {
+                        Name = "SetFloatId" + i,
+                        Text = set["Source"]["Value"].ToString(),
+                        Style = editMenu.MainLayoutGrid.FindResource("RightTextBox") as Style
+                    };
+                    
+                    editMenu.MainLayoutGrid.Children.Add(targetTextBlock);
+                    editMenu.MainLayoutGrid.Children.Add(sourceTextBox);
+                    i += 1;
+                }
             }
                 
             editMenu.ShowDialog();
